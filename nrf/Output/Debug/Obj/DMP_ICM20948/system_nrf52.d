@@ -1,0 +1,27 @@
+Output/Debug/Obj/DMP_ICM20948/system_nrf52.o: \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Source/system_nrf52.c \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/stdint.h \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL.h \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_ConfDefaults.h \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_Conf.h \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_Arm_Conf.h \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/stdbool.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf52.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/CMSIS_5/CMSIS/Core/Include/core_cm4.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/CMSIS_5/CMSIS/Core/Include/cmsis_version.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/CMSIS_5/CMSIS/Core/Include/cmsis_compiler.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/CMSIS_5/CMSIS/Core/Include/cmsis_gcc.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/CMSIS_5/CMSIS/Core/Include/mpu_armv7.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/system_nrf52.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf52_bitfields.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf51_to_nrf52.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf52_name_change.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/compiler_abstraction.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf_peripherals.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf52832_peripherals.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf52_erratas.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/system_nrf52.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/system_nrf52_approtect.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf52_erratas.h
