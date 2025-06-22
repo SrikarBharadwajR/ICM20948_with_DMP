@@ -8,7 +8,7 @@ Output/Debug/Obj/DMP_ICM20948/app_scheduler.o: \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_Arm_Conf.h \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/stdbool.h \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/string.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/config/nrf52832/config/sdk_config.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/sdk_config.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nordic_common.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/compiler_abstraction.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_os.h \
@@ -29,4 +29,14 @@ Output/Debug/Obj/DMP_ICM20948/app_scheduler.o: \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf52_name_change.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/compiler_abstraction.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_macros.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nrf_assert.h
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nrf_assert.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/scheduler/app_scheduler.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error.h \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/stdio.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error_weak.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_util.h \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/stdlib.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/drivers_nrf/nrf_soc_nosd/nrf_soc.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nrf_assert.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_util_platform.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error.h

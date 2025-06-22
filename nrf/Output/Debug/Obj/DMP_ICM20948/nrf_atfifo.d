@@ -24,7 +24,7 @@ Output/Debug/Obj/DMP_ICM20948/nrf_atfifo.o: \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf52_name_change.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/compiler_abstraction.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/atomic_fifo/nrf_atfifo.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/config/nrf52832/config/sdk_config.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/sdk_config.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nordic_common.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nrf_assert.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_errors.h \

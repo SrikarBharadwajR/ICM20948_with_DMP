@@ -8,7 +8,7 @@ Output/Debug/Obj/DMP_ICM20948/nrf_strerror.o: \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_Arm_Conf.h \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/stdbool.h \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/string.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/config/nrf52832/config/sdk_config.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/sdk_config.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nordic_common.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/compiler_abstraction.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_os.h \

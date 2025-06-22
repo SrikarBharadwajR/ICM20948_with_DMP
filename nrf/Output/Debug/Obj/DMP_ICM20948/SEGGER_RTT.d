@@ -1,21 +1,15 @@
-Output/Debug/Obj/DMP_ICM20948/nrf_fprintf.o: \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/external/fprintf/nrf_fprintf.c \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_common.h \
+Output/Debug/Obj/DMP_ICM20948/SEGGER_RTT.o: \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/external/segger_rtt/SEGGER_RTT.c \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/external/segger_rtt/SEGGER_RTT.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/external/segger_rtt/SEGGER_RTT_Conf.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nordic_common.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_util_platform.h \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/stdint.h \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL.h \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_ConfDefaults.h \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_Conf.h \
  /opt/SEGGER/segger_embedded_studio_8.22a/include/__SEGGER_RTL_Arm_Conf.h \
- /opt/SEGGER/segger_embedded_studio_8.22a/include/stdbool.h \
- /opt/SEGGER/segger_embedded_studio_8.22a/include/string.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/sdk_config.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nordic_common.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/compiler_abstraction.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_os.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_errors.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/drivers_nrf/nrf_soc_nosd/nrf_error.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_util.h \
- /opt/SEGGER/segger_embedded_studio_8.22a/include/stddef.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf52.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/CMSIS_5/CMSIS/Core/Include/core_cm4.h \
@@ -28,9 +22,13 @@ Output/Debug/Obj/DMP_ICM20948/nrf_fprintf.o: \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf51_to_nrf52.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/nrf52_name_change.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF/Device/Include/compiler_abstraction.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_macros.h \
  /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nrf_assert.h \
- /opt/SEGGER/segger_embedded_studio_8.22a/include/stdarg.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nrf_assert.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/external/fprintf/nrf_fprintf_format.h \
- /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/external/fprintf/nrf_fprintf.h
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error.h \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/stdio.h \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/stdbool.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_errors.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/drivers_nrf/nrf_soc_nosd/nrf_error.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nordic_common.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error_weak.h \
+ /home/srikar/Projects/DMP_ICM20948/nrf/sdk_config.h \
+ /opt/SEGGER/segger_embedded_studio_8.22a/include/string.h
