@@ -1,0 +1,2 @@
+- Blocking and non blocking in SPI and I2C code, and test.
+- Print debugging is not added in _hal.
