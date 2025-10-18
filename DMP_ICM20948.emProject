@@ -109,13 +109,13 @@
       <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
       <file file_name="main.c" />
       <file file_name="src/ICM20948.c" />
-      <file file_name="src/sensor_dal.c" />
+      <file file_name="src/sensor_comm.c" />
       <file file_name="src/platform_hal_nrf52.c" />
     </folder>
     <folder Name="Includes Files">
       <configuration Name="Common" filter="h;hpp" />
       <file file_name="inc/ICM20948.h" />
-      <file file_name="inc/sensor_dal.h" />
+      <file file_name="inc/sensor_comm.h" />
       <file file_name="inc/platform_hal.h" />
     </folder>
     <folder Name="System Files">

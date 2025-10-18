@@ -21,6 +21,19 @@
 /*                Includes                   */
 /*********************************************/
 
+// Todo: Remove these duplicate includes
+#include "app_error.h"
+#include "app_util_platform.h"
+#include "boards.h"
+#include "nrf_delay.h"
+#include "nrf_drv_spi.h"
+#include "nrf_drv_twi.h"
+#include "nrf_gpio.h"
+#include "nrf_log.h"
+#include "nrf_log_ctrl.h"
+#include "nrf_log_default_backends.h"
+//
+
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -36,12 +49,11 @@
 #define PLATFORM_HAL_DEBUG_LOG_ENABLED
 
 #ifdef PLATFORM_HAL_DEBUG_LOG_ENABLED
-// In a real application, you would replace printf with your platform's logging utility (e.g., NRF_LOG_INFO)
-#define PLATFORM_HAL_LOG(...) printf(__VA_ARGS__)
+#define PLATFORM_HAL_LOG(...)                                                                                          \
+    NRF_LOG_INFO(__VA_ARGS__) // Todo: Add Log flushing after this, and put this in a init function
 #else
 #define PLATFORM_HAL_LOG(...)
 #endif
-
 
 /*********************************************/
 /*              Enumerations                 */
@@ -75,9 +87,10 @@ typedef enum
 /**
  * @brief Configuration for communication mode and its parameters.
  */
-typedef struct {
-    comm_mode_t mode;       /**< The selected communication mode */
-    int32_t timeout_ms;     /**< Timeout duration in milliseconds (used in blocking mode) */
+typedef struct
+{
+    comm_mode_t mode;   /**< The selected communication mode */
+    int32_t timeout_ms; /**< Timeout duration in milliseconds (used in blocking mode) */
 } comm_cfg_t;
 
 /**
@@ -112,8 +125,9 @@ typedef union {
  * @param p_comm_cfg Pointer to the communication mode configuration.
  * @return PLATFORM_HAL_OK on success.
  */
-typedef platform_hal_err_t (*platform_hal_write_reg_t)(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, const uint8_t *p_data,
-                                                       uint32_t len, const comm_cfg_t *p_comm_cfg);
+typedef platform_hal_err_t (*platform_hal_write_reg_t)(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg,
+                                                       const uint8_t *p_data, uint32_t len,
+                                                       const comm_cfg_t *p_comm_cfg);
 
 /**
  * @brief Function pointer for a generic register read function.
@@ -130,6 +144,7 @@ typedef platform_hal_err_t (*platform_hal_read_reg_t)(platform_hal_bus_cfg_t *p_
 /*********************************************/
 /*           Function Prototypes             */
 /*********************************************/
+void platform_hal_spi_event_handler(nrf_drv_spi_evt_t const *p_event, void *p_context); // Todo: Add comments
 
 /**
  * @brief Platform-specific delay in milliseconds.
@@ -140,8 +155,8 @@ void platform_hal_delay_ms(uint32_t ms);
 /**
  * @brief HAL implementation for writing data over SPI.
  */
-platform_hal_err_t platform_hal_spi_write(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, const uint8_t *p_data, uint32_t len,
-                                          const comm_cfg_t *p_comm_cfg);
+platform_hal_err_t platform_hal_spi_write(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, const uint8_t *p_data,
+                                          uint32_t len, const comm_cfg_t *p_comm_cfg);
 
 /**
  * @brief HAL implementation for reading data over SPI.
@@ -152,8 +167,8 @@ platform_hal_err_t platform_hal_spi_read(platform_hal_bus_cfg_t *p_bus_cfg, uint
 /**
  * @brief HAL implementation for writing data over TWI/I2C.
  */
-platform_hal_err_t platform_hal_twi_write(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, const uint8_t *p_data, uint32_t len,
-                                          const comm_cfg_t *p_comm_cfg);
+platform_hal_err_t platform_hal_twi_write(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, const uint8_t *p_data,
+                                          uint32_t len, const comm_cfg_t *p_comm_cfg);
 
 /**
  * @brief HAL implementation for reading data over TWI/I2C.
@@ -162,4 +177,3 @@ platform_hal_err_t platform_hal_twi_read(platform_hal_bus_cfg_t *p_bus_cfg, uint
                                          const comm_cfg_t *p_comm_cfg);
 
 #endif // PLATFORM_HAL_H__
-

@@ -52,12 +52,14 @@ void platform_hal_delay_ms(uint32_t ms)
     nrf_delay_ms(ms);
 }
 
-platform_hal_err_t platform_hal_spi_write(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, const uint8_t *p_data, uint32_t len, const comm_cfg_t *p_comm_cfg)
+platform_hal_err_t platform_hal_spi_write(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, const uint8_t *p_data,
+                                          uint32_t len, const comm_cfg_t *p_comm_cfg)
 {
-    if (p_bus_cfg == NULL || p_comm_cfg == NULL) return PLATFORM_HAL_ERR_INVALID_PARAM;
-    
+    if (p_bus_cfg == NULL || p_comm_cfg == NULL)
+        return PLATFORM_HAL_ERR_INVALID_PARAM;
+
     // The p_instance from the union is cast to the nRF driver type
-    nrf_drv_spi_t const * p_spi_instance = (nrf_drv_spi_t const *)p_bus_cfg->spi.p_instance;
+    nrf_drv_spi_t const *p_spi_instance = (nrf_drv_spi_t const *)p_bus_cfg->spi.p_instance;
 
     uint8_t tx_buf[len + 1];
     tx_buf[0] = reg & 0x7F; // For a write, the MSB is 0.
@@ -65,7 +67,7 @@ platform_hal_err_t platform_hal_spi_write(platform_hal_bus_cfg_t *p_bus_cfg, uin
 
     nrf_gpio_pin_clear(p_bus_cfg->spi.ss_pin);
     nrf_delay_us(10);
-    
+
     PLATFORM_HAL_LOG("[HAL SPI Write] Reg: 0x%02X, Len: %lu\r\n", reg, len);
 
     spi_xfer_done = false;
@@ -78,14 +80,14 @@ platform_hal_err_t platform_hal_spi_write(platform_hal_bus_cfg_t *p_bus_cfg, uin
         return PLATFORM_HAL_ERR_COMM;
     }
 
-    if(p_comm_cfg->mode == COMM_MODE_BLOCKING)
+    if (p_comm_cfg->mode == COMM_MODE_BLOCKING)
     {
         // For nRF, non-blocking is event-driven. This while loop makes it blocking.
         // A timeout could be implemented here with a counter.
-    while (!spi_xfer_done)
-    {
-        __WFE(); // Wait for event, saves power
-    }
+        while (!spi_xfer_done)
+        {
+            __WFE(); // Wait for event, saves power
+        }
     }
     // In non-blocking mode, we would return here and expect the event handler to manage the state.
 
@@ -95,11 +97,13 @@ platform_hal_err_t platform_hal_spi_write(platform_hal_bus_cfg_t *p_bus_cfg, uin
     return PLATFORM_HAL_OK;
 }
 
-platform_hal_err_t platform_hal_spi_read(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, uint8_t *p_data, uint32_t len, const comm_cfg_t *p_comm_cfg)
+platform_hal_err_t platform_hal_spi_read(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, uint8_t *p_data, uint32_t len,
+                                         const comm_cfg_t *p_comm_cfg)
 {
-    if (p_bus_cfg == NULL || p_comm_cfg == NULL) return PLATFORM_HAL_ERR_INVALID_PARAM;
+    if (p_bus_cfg == NULL || p_comm_cfg == NULL)
+        return PLATFORM_HAL_ERR_INVALID_PARAM;
 
-    nrf_drv_spi_t const * p_spi_instance = (nrf_drv_spi_t const *)p_bus_cfg->spi.p_instance;
+    nrf_drv_spi_t const *p_spi_instance = (nrf_drv_spi_t const *)p_bus_cfg->spi.p_instance;
 
     uint8_t tx_buf[len + 1];
     uint8_t rx_buf[len + 1];
@@ -122,11 +126,11 @@ platform_hal_err_t platform_hal_spi_read(platform_hal_bus_cfg_t *p_bus_cfg, uint
         return PLATFORM_HAL_ERR_COMM;
     }
 
-    if(p_comm_cfg->mode == COMM_MODE_BLOCKING)
+    if (p_comm_cfg->mode == COMM_MODE_BLOCKING)
     {
-    while (!spi_xfer_done)
-    {
-        __WFE();
+        while (!spi_xfer_done)
+        {
+            __WFE();
         }
     }
 
@@ -138,15 +142,16 @@ platform_hal_err_t platform_hal_spi_read(platform_hal_bus_cfg_t *p_bus_cfg, uint
     return PLATFORM_HAL_OK;
 }
 
-platform_hal_err_t platform_hal_twi_write(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, const uint8_t *p_data, uint32_t len, const comm_cfg_t *p_comm_cfg)
+platform_hal_err_t platform_hal_twi_write(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, const uint8_t *p_data,
+                                          uint32_t len, const comm_cfg_t *p_comm_cfg)
 {
     PLATFORM_HAL_LOG("[HAL TWI Write] Not supported.\r\n");
     return PLATFORM_HAL_ERR_NOT_SUPPORTED;
 }
 
-platform_hal_err_t platform_hal_twi_read(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, uint8_t *p_data, uint32_t len, const comm_cfg_t *p_comm_cfg)
+platform_hal_err_t platform_hal_twi_read(platform_hal_bus_cfg_t *p_bus_cfg, uint8_t reg, uint8_t *p_data, uint32_t len,
+                                         const comm_cfg_t *p_comm_cfg)
 {
     PLATFORM_HAL_LOG("[HAL TWI Read] Not supported.\r\n");
     return PLATFORM_HAL_ERR_NOT_SUPPORTED;
 }
-
