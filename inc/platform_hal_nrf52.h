@@ -37,6 +37,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
+#include "math.h"
 
 /*********************************************/
 /*                Defines                    */
@@ -47,7 +48,7 @@
 #define PLATFORM_LOG_INFO_ENABLED
 #define PLATFORM_LOG_ERROR_ENABLED
 #define PLATFORM_LOG_WARNING_ENABLED
-#define PLATFORM_LOG_DEBUG_ENABLED
+//#define PLATFORM_LOG_DEBUG_ENABLED
 
 #ifdef PLATFORM_LOG_INFO_ENABLED
 #define PLATFORM_LOG_INFO(...)                                                                                         \

@@ -41,6 +41,8 @@ typedef enum
     ICM20948_ERR_COMM = -2,
     ICM20948_ERR_DEVICE_NOT_FOUND = -3,
     ICM20948_ERR_PLATFORM_FAIL = -4,
+    ICM20948_ERR_NOT_SUPPORTED = -5,
+    ICM20948_ERR_NO_DATA = -6,
 } icm20948_err_t;
 
 /*********************************************/
@@ -164,5 +166,74 @@ icm20948_err_t icm20948_mag_who_i_am(icm20948_dev_t *p_dev);
  * @return ICM20948_OK on success, otherwise an error code.
  */
 icm20948_err_t icm20948_reset_mag(icm20948_dev_t *p_dev);
+
+icm20948_err_t icm20948_initialize_dmp(icm20948_dev_t *p_dev);
+
+/**
+ * @brief Enables or disables specific DMP sensor features.
+ *
+ * @param[in] p_dev Pointer to the initialized device handle.
+ * @param[in] sensor The DMP sensor feature to enable/disable (from inv_icm20948_sensor enum).
+ * @param[in] enable True to enable, false to disable.
+ * @return ICM20948_OK on success, otherwise an error code.
+ */
+icm20948_err_t icm20948_enable_dmp_sensor(icm20948_dev_t *p_dev, enum inv_icm20948_sensor sensor, bool enable);
+
+/**
+ * @brief Sets the Output Data Rate (ODR) for a specific DMP sensor output.
+ *
+ * @param[in] p_dev Pointer to the initialized device handle.
+ * @param[in] odr_reg The DMP ODR register to configure (from DMP_ODR_Registers enum).
+ * @param[in] interval The ODR interval value (calculated as (DMP Rate / Desired ODR) - 1).
+ * @return ICM20948_OK on success, otherwise an error code.
+ */
+icm20948_err_t icm20948_set_dmp_odr_rate(icm20948_dev_t *p_dev, enum DMP_ODR_Registers odr_reg, uint16_t interval);
+
+/**
+ * @brief Enables or disables the hardware FIFO buffer.
+ *
+ * @param[in] p_dev Pointer to the initialized device handle.
+ * @param[in] enable True to enable, false to disable.
+ * @return ICM20948_OK on success, otherwise an error code.
+ */
+icm20948_err_t icm20948_enable_fifo(icm20948_dev_t *p_dev, bool enable);
+
+/**
+ * @brief Enables or disables the Digital Motion Processor (DMP).
+ *
+ * @param[in] p_dev Pointer to the initialized device handle.
+ * @param[in] enable True to enable, false to disable.
+ * @return ICM20948_OK on success, otherwise an error code.
+ */
+icm20948_err_t icm20948_enable_dmp(icm20948_dev_t *p_dev, bool enable);
+
+/**
+ * @brief Resets the Digital Motion Processor (DMP).
+ *
+ * @param[in] p_dev Pointer to the initialized device handle.
+ * @return ICM20948_OK on success, otherwise an error code.
+ */
+icm20948_err_t icm20948_reset_dmp(icm20948_dev_t *p_dev);
+
+/**
+ * @brief Resets the hardware FIFO buffer.
+ *
+ * @param[in] p_dev Pointer to the initialized device handle.
+ * @return ICM20948_OK on success, otherwise an error code.
+ */
+icm20948_err_t icm20948_reset_fifo(icm20948_dev_t *p_dev);
+
+/**
+ * @brief Reads one frame of DMP data from the FIFO.
+ * Checks status codes like ICM_20948_Stat_Ok, ICM_20948_Stat_FIFOMoreDataAvail,
+ * ICM_20948_Stat_FIFONoDataAvail, ICM_20948_Stat_FIFOIncompleteData.
+ *
+ * @param[in] p_dev Pointer to the initialized device handle.
+ * @param[out] data Pointer to the structure to store the DMP data.
+ * @param[out] p_status Pointer to store the status returned by the C backbone function.
+ * @return ICM20948_OK if a valid frame was read (status will be Ok or MoreDataAvail), otherwise an error code.
+ */
+icm20948_err_t icm20948_read_dmp_data_from_fifo(icm20948_dev_t *p_dev, icm_20948_DMP_data_t *data,
+                                                ICM_20948_Status_e *p_status);
 
 #endif // ICM20948_H__

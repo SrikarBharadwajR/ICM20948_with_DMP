@@ -25,6 +25,8 @@
   <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948"/>
   <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;Application"/>
   <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;ICM20948 Util Files"/>
+  <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;Includes Files"/>
+  <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;nRF_Log"/>
   <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;Source Files"/>
   <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;System Files"/>
  </Project>
@@ -47,7 +49,9 @@
   <Trace enabled="Yes"/>
  </TraceWindow>
  <Watch1>
-  <Watches active="1" update="Twice a Second"/>
+  <Watches active="1" update="Twice a Second">
+   <Watchpoint expression="icm_dev" name="icm_dev" radix="-1" linenumber="4" filename="main.c"/>
+  </Watches>
  </Watch1>
  <Watch2>
   <Watches active="0" update="Never"/>
@@ -59,14 +63,16 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="55" y="27" useTextEdit="1" path="main.c" left="0" top="11" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="45" y="219" useTextEdit="1" path="inc/platform_hal_nrf52.h" left="0" top="219" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="52" y="68" useTextEdit="1" path="src/platform_hal_nrf52.c" left="0" top="44" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="14" y="15" useTextEdit="1" path="main.c" left="0" selected="1" top="5" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="50" useTextEdit="1" path="inc/platform_hal_nrf52.h" left="0" top="40" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="52" y="68" useTextEdit="1" path="src/platform_hal_nrf52.c" left="0" top="46" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="inc/sensor_comm.h" left="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="21" useTextEdit="1" path="src/sensor_comm.c" left="0" top="9" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="20" useTextEdit="1" path="inc/ICM20948.h" left="0" top="3" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="39" useTextEdit="1" path="src/ICM20948.c" left="0" selected="1" top="18" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="46" y="6" useTextEdit="1" path="util/ICM_20948_C.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="27" y="44" useTextEdit="1" path="inc/ICM20948.h" left="0" top="27" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="35" y="513" useTextEdit="1" path="src/ICM20948.c" left="0" top="494" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="19" y="124" useTextEdit="1" path="util/ICM_20948_C.c" left="0" top="119" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="9" y="174" useTextEdit="1" path="util/ICM_20948_C.h" left="0" top="162" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="40" useTextEdit="1" path="sdk_config.h" left="0" top="40" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="DMP_ICM20948" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/modules/nrfx/hal" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <EMStudioWindow activeProject="DMP_ICM20948" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/modules/nrfx/hal" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
