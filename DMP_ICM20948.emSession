@@ -24,9 +24,9 @@
   <ProjectSessionItem path="DMP_ICM20948"/>
   <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948"/>
   <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;Application"/>
-  <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;Includes Files"/>
-  <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;nRF_Drivers"/>
+  <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;ICM20948 Util Files"/>
   <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;Source Files"/>
+  <ProjectSessionItem path="DMP_ICM20948;DMP_ICM20948;System Files"/>
  </Project>
  <Register1>
   <RegisterWindow invisibleNodes="" visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/MSP;CPU/PSP;CPU/PRIMASK;CPU/BASEPRI;CPU/FAULTMASK;CPU/CONTROL;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="DMP_ICM20948_Debug" decimalNodes="" octalNodes="" unsignedNodes=""/>
@@ -59,12 +59,14 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="39" y="34" useTextEdit="1" path="main.c" left="0" selected="1" top="28" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="27" y="54" useTextEdit="1" path="inc/ICM20948.h" left="0" top="41" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="3" y="54" useTextEdit="1" path="src/ICM20948.c" left="0" top="41" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="inc/sensor_comm.h" left="0" top="24" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="112" useTextEdit="1" path="inc/platform_hal.h" left="0" top="118" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="29" y="130" useTextEdit="1" path="src/platform_hal_nrf52.c" left="0" top="76" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="55" y="27" useTextEdit="1" path="main.c" left="0" top="11" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="45" y="219" useTextEdit="1" path="inc/platform_hal_nrf52.h" left="0" top="219" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="52" y="68" useTextEdit="1" path="src/platform_hal_nrf52.c" left="0" top="44" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="inc/sensor_comm.h" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="21" useTextEdit="1" path="src/sensor_comm.c" left="0" top="9" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="20" useTextEdit="1" path="inc/ICM20948.h" left="0" top="3" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="39" useTextEdit="1" path="src/ICM20948.c" left="0" selected="1" top="18" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="46" y="6" useTextEdit="1" path="util/ICM_20948_C.c" left="0" top="0" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="DMP_ICM20948" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/modules/nrfx/hal" debugSearchPath="" autoConnectCapabilities="3711"/>
+ <EMStudioWindow activeProject="DMP_ICM20948" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="/home/srikar/Projects/DMP_ICM20948/nrf/nRF5_SDK_17.1.0_ddde560/modules/nrfx/hal" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>
